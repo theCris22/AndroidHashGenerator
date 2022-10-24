@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AndroidHashGenerator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ahg_tv_hash_generator">Hash Generator</string>
+    <string name="ahg_et_your_text_hint">Your text…</string>
+    <string name="ahg_button_text_generate">Generate</string>
+    <string name="menu_text_clear">Clear</string>
+    <string name="tv_select_one">Select one</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hash_algorithms">
+        <item>SHA-256</item>
+        <item>SHA-512</item>
+        <item>SHA-MD5</item>
+    </string-array>
+</resources>
