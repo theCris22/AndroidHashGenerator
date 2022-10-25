@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darker"
-    tools:context=".HomeFragment">
+    tools:context=".ui.home.fragments.HomeFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_View_tittle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
@@ -32,25 +32,25 @@
         app:boxStrokeColor="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/text_View_tittle"
         app:startIconDrawable="@drawable/icon_lock"
         app:startIconTint="@color/teal_200">
 
         <AutoCompleteTextView
-            android:id="@+id/acHash"
+            android:id="@+id/auto_complete_text_view_hash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tv_select_one"
             android:inputType="none"
-            android:labelFor="@id/acHash"
+            android:labelFor="@id/auto_complete_text_view_hash"
             android:padding="20dp"
+            android:text="@string/tv_select_one"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
-        android:id="@+id/edit_text"
+        android:id="@+id/edit_text_hash"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="16dp"

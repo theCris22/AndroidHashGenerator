@@ -1,9 +1,10 @@
-package com.crisnavarro.androidhashgenerator
+package com.crisnavarro.androidhashgenerator.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavHost
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.crisnavarro.androidhashgenerator.R
 import com.crisnavarro.androidhashgenerator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
