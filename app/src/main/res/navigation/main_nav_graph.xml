@@ -7,20 +7,28 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.crisnavarro.androidhashgenerator.HomeFragment"
-        android:label="fragment_home"
+        android:name="com.crisnavarro.androidhashgenerator.ui.home.fragments.HomeFragment"
+        android:label="HOME"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_hashFragment"
-            app:destination="@id/hashFragment" />
+            app:destination="@id/hashFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/hashFragment"
-        android:name="com.crisnavarro.androidhashgenerator.HashFragment"
-        android:label="fragment_hash"
+        android:name="com.crisnavarro.androidhashgenerator.ui.hash.HashFragment"
+        android:label="HASH"
         tools:layout="@layout/fragment_hash">
         <action
             android:id="@+id/action_hashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>
