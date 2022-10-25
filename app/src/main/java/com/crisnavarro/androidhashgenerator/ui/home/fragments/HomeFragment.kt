@@ -47,6 +47,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), MenuProvider {
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         return when (menuItem.itemId) {
             R.id.clear_text_menu -> {
+                binding!!.editTextHash.text.clear()
                 true
             }
             else -> false
@@ -62,7 +63,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), MenuProvider {
             android.R.layout.simple_list_item_1,
             resources.getStringArray(R.array.hash_algorithms)
         ).apply {
-            binding!!.acHash.setAdapter(this)
+            binding!!.autoCompleteTextViewHash.setAdapter(this)
         }
 
     }
@@ -79,14 +80,21 @@ class HomeFragment : Fragment(R.layout.fragment_home), MenuProvider {
     }
 
     private fun goToHash() {
+
+        val algorithm = binding!!.autoCompleteTextViewHash.text.toString()
+        val text = binding!!.editTextHash.text.toString()
+
         lifecycleScope.launch {
             animation()
             delay(400)
+            viewModel.makeHash(algorithm, text)
             findNavController().navigate(R.id.action_homeFragment_to_hashFragment)
         }
     }
 
-    private fun isValidFrom() = binding!!.editTextHash.text.isNotEmpty()
+    private fun isValidFrom() = with(binding!!) {
+        editTextHash.text.isNotEmpty() && autoCompleteTextViewHash.text.toString() != getString(R.string.tv_select_one)
+    }
 
     private fun animation() {
         with(binding!!) {
