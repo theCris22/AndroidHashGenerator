@@ -87,7 +87,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), MenuProvider {
         lifecycleScope.launch {
             animation()
             delay(400)
-            val data = HomeFragmentDirections.actionHomeFragmentToHashFragment(viewModel.makeHash(algorithm, text))
+            val data = HomeFragmentDirections.actionHomeFragmentToHashFragment(
+                viewModel.makeHash(
+                    algorithm,
+                    text
+                )
+            )
             findNavController().navigate(data)
         }
     }
